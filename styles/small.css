@@ -95,3 +95,52 @@ section img {
     height: auto;
     margin: auto;
 }
+
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    flex: 1;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+#course-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.course {
+    background-color: white;
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid #ababab;
+}
+
+.course.completed {
+    background-color: #272626;
+    color: white;
+}
+
+footer {
+    background-color: #302f2f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: white;
+    margin: 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.8rem;
+}
