@@ -40,8 +40,38 @@
         <h1>
             Home
         </h1>
+        <div class="content">
+
+            <section>
+                <h2>About Myself</h2>
+                <p>
+                    Hi! I am Ezequiel. I'm a Software Development student at BYU-Idaho. I enjoy learning new
+                    technologies and improving my programming skills.
+                </p>
+            </section>
+            <section>
+                <h2>Student Photo</h2>
+                <img src="images/" alt="Picture of Ezequiel Piccardo" width="300" height="300">
+            </section>
+            <section class="courses">
+                <h2>Web Certificate Courses</h2>
+
+                <div class="filters">
+                    <button data-filter="all" aria-pressed="true">All</button>
+                    <button data-filter="WDD" aria-pressed="false">WDD</button>
+                    <button data-filter="CSE" aria-pressed="false">CSE</button>
+                </div>
+
+                <div id="course-list"></div>
+
+                <p>
+                    Credits in total:
+                    <strong id="credit-total">0</strong>
+                </p>
+            </section>
+        </div>
     </main>
-    </h1>
+
 </body>
 
 </html>
