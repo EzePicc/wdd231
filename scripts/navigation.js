@@ -9,5 +9,4 @@ menuButton.addEventListener
             const isOpen = navigation.classList.contains("open");
             menuButton.setAttribute("aria-expanded", isOpen);
         }
-
     )
