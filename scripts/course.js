@@ -19,3 +19,26 @@ const courses = [
     { code: "WDD430", credits: 3, completed: false }
 
 ]
+const courseList = document.querySelector("#course-list")
+const creditTotal = document.querySelector("#credit-total")
+
+function displayCourses(filter) {
+
+    courseList.innerHTML = "";
+    const filteredCourses = courses.filter(course =>
+        filter === "all" || course.code.startsWith(filter)
+    );
+    filteredCourses.forEach(course => {
+
+        const courseElement = document.createElement("div")
+        courseElement.classList.add("course");
+
+        if (course.completed) {
+            courseElement.classList.add("completed");
+        }
+        courseElement.textContent =
+            `${course.code} - ${course.credits} credits`;
+
+        courseList.appendChild(courseElement);
+    })
+}
