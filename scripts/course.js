@@ -62,7 +62,7 @@ filterButtons.forEach(button => {
         const filter = button.dataset.filter;
         displayCourses(filter);
         const filteredCourses = courses.filter(course =>
-            filter == "all" || course.code.startsWith(filter)
+            filter === "all" || course.code.startsWith(filter)
         );
         updateCredits(filteredCourses);
     }
