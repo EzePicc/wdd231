@@ -42,3 +42,33 @@ function displayCourses(filter) {
         courseList.appendChild(courseElement);
     })
 }
+
+const filterButtons = document.querySelectorAll("[data-filter]");
+function updateCredits(filteredCourses) {
+    const total = filteredCourses.reduce(
+        (sum, course) => sum + course.credits,
+        0
+    );
+    creditTotal.textContent = total;
+}
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+        filterButtons.forEach(item => {
+            item.setAttribute("aria-pressed", "false");
+        })
+        button.setAttribute("aria-pressed", "true");
+
+        const filter = button.dataset.filter;
+        displayCourses(filter);
+        const filteredCourses = courses.filter(course =>
+            filter == "all" || course.code.startsWith(filter)
+        );
+        updateCredits(filteredCourses);
+    }
+    )
+
+});
+
+displayCourses("all")
+updateCredits(courses)
