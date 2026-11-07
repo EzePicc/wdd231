@@ -1,17 +1,7 @@
-@media only screen and (min-width: 64rem) {
-
-    #members-content {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media only screen and (min-width: 32rem) {
+
     .header-content {
         flex-wrap: nowrap;
-    }
-
-    .list-view .member-card img {
-        display: none;
     }
 
     #menu-button {
@@ -36,9 +26,39 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+}
+
+@media only screen and (min-width: 64rem) {
+
+    #members-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     #members-content.list-view {
         display: flex;
         flex-direction: column;
+        gap: 0;
     }
 
+    .list-view .member-card {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1fr 1.5fr 1fr;
+        align-items: center;
+        text-align: left;
+        padding: 18px 25px;
+        gap: 15px;
+    }
+
+    .list-view .member-card h2 {
+        margin: 0;
+    }
+
+    .list-view .member-card p {
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .list-view .member-card img {
+        display: none;
+    }
 }
