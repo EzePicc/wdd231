@@ -12,7 +12,12 @@ function displayMembers(members) {
             <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p>Membership Level: ${member.membershipLevel}</p>
+            <p>
+            Membership Level: ${
+                member.membershipLevel === 3 ? "Gold" :
+                member.membershipLevel === 2 ? "Silver" : "Member"
+            }
+            </p>
             <a href="${member.website}" target="_blank" rel="noopener">
                 Visit Website
             </a>
@@ -22,11 +27,11 @@ function displayMembers(members) {
 
 }
 
-const membersContainer = document.querySelector("#members-container");
+const membersContainer = document.querySelector("#members-content");
 async function getMembers() {
     try {
         const response = await fetch("data/members.json");
-
+        
         if (!response.ok) {
             throw new Error("Could not load members data");
         }
@@ -41,6 +46,14 @@ async function getMembers() {
         membersContainer.innerHTML = "<p>Unable to load members.</p>";
     }
 }
+
+document.querySelector("#current-year").textContent =
+    new Date().getFullYear();
+
+document.querySelector("#last-modified").textContent =
+    new Date(document.lastModified).toLocaleString("en-US", {
+        dateStyle: "long"
+    });
 
 const gridButton = document.querySelector("#grid-button");
 const listButton = document.querySelector("#list-button");

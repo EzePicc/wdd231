@@ -4,6 +4,7 @@ body {
     background-color: #ffffff;
     line-height: 1.5;
 }
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -14,6 +15,7 @@ h1,
 h2 {
     color: #142a42;
 }
+
 h1 {
     text-align: center;
     margin: 20px 0;
@@ -113,13 +115,13 @@ header {
     color: #142a42;
 }
 
-#members-container {
+#members-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-#members-container.list-view {
+#members-content.list-view {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -157,9 +159,21 @@ header {
 .list-view .member-card {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: stretch;
+    text-align: center;
     border-radius: 0;
-    padding: 15px;
+    padding: 15px 20px;
+    gap: 10px;
+}
+
+.list-view .member-card h2 {
+    flex: 1;
+    margin: 0;
+}
+
+.list-view .member-card p {
+    flex: 1;
+    margin: 0;
 }
 
 .list-view .member-card img {

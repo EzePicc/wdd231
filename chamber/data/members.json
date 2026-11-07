@@ -1,0 +1,60 @@
+[
+    
+    {
+        "name": "Pauline Boulangerie",
+        "address": "Rosales 256, Ramos Mejía B1704EYF Argentina",
+        "phone": "+54 11 4656-5916",
+        "website": "https://www.facebook.com/PAULINE.Boulangerie.1964/",
+        "image": "pauline.jpeg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Heladería Luján",
+        "address": "Avenida de Mayo 901, Ramos Mejía B1704BUJ Argentina",
+        "phone": "+54 11 4658-3896",
+        "website": "https://www.google.com",
+        "image": "lujan.jpg",
+        "membershipLevel": 2
+    },
+
+    {
+        "name": "Clöe Bakehouse",
+        "address": "Calle Bolivar 501, Ramos Mejía B1704BKK Argentina",
+        "phone": "+54 11 3966-3210",
+        "website": "https://www.facebook.com/CloeBakehouseRamosMejia/",
+        "image": "bakehouse.jpeg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Heladeria Tasty",
+        "address": "Calle Alvarez Jonte 99 9 de Julio, Ramos Mejía B1704EKA Argentina",
+        "phone": "+54 11 4464-0199",
+        "website": "https://www.google.com",
+        "image": "tasty.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Cafe Martinez",
+        "address": "Calle Necochea 140, Ramos Mejía B1704BRD Argentina",
+        "phone": "+46544313",
+        "website": "https://www.cafemartinez.com/",
+        "image": "martinez.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "La Casita de Oberon",
+        "address": "Av. de Mayo 944, Ramos Mejía B1704BUW Argentina",
+        "phone": "+54 11 2093-1306",
+        "website": "https://www.facebook.com/LaCasitaDeOberonRamosMejia/",
+        "image": "casita.jpg", "membershipLevel": 1
+        
+    },
+    {
+        "name": "Casa Tres",
+        "address": "Gral. Soler 43, B1704EEC Ramos Mejía, Provincia de Buenos Aires",
+        "phone": "011 3664-1677",
+        "website":"https://www.instagram.com/casatresvermut?igsh=MTY0M21ueWRsem4zeQ==",
+        "image": "casatres.png",
+        "membershipLevel":2
+    }
+]
