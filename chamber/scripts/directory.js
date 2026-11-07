@@ -41,3 +41,24 @@ async function getMembers() {
         membersContainer.innerHTML = "<p>Unable to load members.</p>";
     }
 }
+
+const gridButton = document.querySelector("#grid-button");
+const listButton = document.querySelector("#list-button");
+
+gridButton.addEventListener("click", () => {
+    membersContainer.classList.remove("list-view");
+    membersContainer.classList.add("grid-view");
+
+    gridButton.classList.add("active");
+    listButton.classList.remove("active");
+});
+
+listButton.addEventListener("click", () => {
+    membersContainer.classList.remove("grid-view");
+    membersContainer.classList.add("list-view");
+
+    listButton.classList.add("active");
+    gridButton.classList.remove("active");
+});
+
+getMembers()
