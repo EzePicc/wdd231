@@ -21,3 +21,23 @@ function displayMembers(members) {
     });
 
 }
+
+const membersContainer = document.querySelector("#members-container");
+async function getMembers() {
+    try {
+        const response = await fetch("data/members.json");
+
+        if (!response.ok) {
+            throw new Error("Could not load members data");
+        }
+
+        const members = await response.json();
+
+        displayMembers(members);
+
+    } catch (error) {
+        console.error("Error loading members:", error);
+
+        membersContainer.innerHTML = "<p>Unable to load members.</p>";
+    }
+}
