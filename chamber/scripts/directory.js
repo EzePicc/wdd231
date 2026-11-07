@@ -13,8 +13,7 @@ function displayMembers(members) {
             <p>${member.address}</p>
             <p>${member.phone}</p>
             <p>
-            Membership Level: ${
-                member.membershipLevel === 3 ? "Gold" :
+            Membership Level: ${member.membershipLevel === 3 ? "Gold" :
                 member.membershipLevel === 2 ? "Silver" : "Member"
             }
             </p>
@@ -31,7 +30,7 @@ const membersContainer = document.querySelector("#members-content");
 async function getMembers() {
     try {
         const response = await fetch("data/members.json");
-        
+
         if (!response.ok) {
             throw new Error("Could not load members data");
         }

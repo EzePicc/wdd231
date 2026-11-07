@@ -46,6 +46,7 @@ img {
 a {
     overflow-wrap: anywhere;
 }
+
 header {
     background-color: #142a42;
     color: white;
@@ -73,6 +74,7 @@ header {
     height: 55px;
     object-fit: contain;
 }
+
 #menu-button {
     background: none;
     border: none;
@@ -108,9 +110,11 @@ header {
     background-color: #d9aa4c;
     color: #142a42;
 }
+
 .directory-section {
     margin: 20px 0;
 }
+
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -132,11 +136,13 @@ header {
     background-color: #d9aa4c;
     color: #142a42;
 }
+
 #members-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
+
 .member-card {
     background-color: white;
     border: 1px solid #dfdbdb;
@@ -164,10 +170,15 @@ header {
     color: #142a42;
     font-weight: bold;
 }
+
 #members-content.list-view {
     display: flex;
     flex-direction: column;
     gap: 0;
+}
+
+#members-content {
+    min-height: 2100px;
 }
 
 .list-view .member-card {
@@ -194,6 +205,7 @@ header {
     flex: none;
     margin: 0;
 }
+
 footer {
     background-color: #142a42;
     color: white;
@@ -216,6 +228,7 @@ footer p {
     border-top: 1px solid #ffffff;
     padding-top: 15px;
 }
+
 button:focus,
 a:focus {
     outline: 3px solid #d9aa4c;

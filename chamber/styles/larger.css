@@ -28,6 +28,18 @@
 
 }
 
+@media only screen and (min-width: 32rem) {
+    #members-content {
+        min-height: 1200px;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #members-content {
+        min-height: 900px;
+    }
+}
+
 @media only screen and (min-width: 64rem) {
 
     #members-content {
