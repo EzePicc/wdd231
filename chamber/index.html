@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home - Ramos Mejía Business Community</title>
+    <meta name="description"
+        content="Welcome to the Ramos Mejía Business Community. Discover local events, business opportunities, community resources, and local businesses.">
+    <meta name="author" content=" Ezequiel Piccardo ">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <meta property="og:title" content="Ramos Mejía Business Community">
+    <meta property="og:description" content="Discover local businesses, events, and opportunities in Ramos Mejía">
+    <meta property="og:image" content="https://ezepicc.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://ezepicc.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+
+</head>
+
+
+<body>
+    <header>
+        <div class="header-content">
+
+            <a href="index.html" class="logo">
+
+                <img src="images/logo.png" alt="Ramos Mejía Business Community logo">
+                <span>Ramos Mejía Business Community</span>
+
+            </a>
+            <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+                Menu
+            </button>
+
+            <nav id="navigation">
+
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover More</a></li>
+
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <h1>Welcome to Ramos Mejía Community</h1>
+
+        <section class="hero">
+            <img src="images/hero.jfif" alt="Businesses and community in Ramos Mejía">
+            <div class="hero-content">
+
+                <h2>Working Together, Helping Local Businesses</h2>
+                <a href="join.html">Join us!</a>
+
+            </div>
+        </section>
+        <section class="events">
+            <h2>Present Events</h2>
+            <div id="events-content">
+            </div>
+        </section>
+
+        <section class="weather">
+
+            <h2>Weather</h2>
+
+            <div id="current-weather">
+            </div>
+
+            <div id="weather-forecast">
+                <h3>3-Day Forecast</h3>
+            </div>
+
+        </section>
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlights-content">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>Ramos Mejía Business Community</h2>
+            <p>Email: info@ramosmejiabusiness.example</p>
+        </div>
+        <div class="footer-development">
+            <p>Ezequiel Piccardo - WDD 231</p>
+            <p>&copy; <span id="current-year"></span> Ramos Mejía Business Community</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

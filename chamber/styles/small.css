@@ -234,3 +234,149 @@ a:focus {
     outline: 3px solid #d9aa4c;
     outline-offset: 3px;
 }
+
+.home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-main h1 {
+    margin: 25px 0;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 41, 65, 0.65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.hero-content h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-content a {
+    display: inline-block;
+    background-color: #dbaa49;
+    color: #142a42;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+.hero-content a:hover {
+    background-color: white;
+}
+
+.home-main .events,
+.home-main .weather,
+.home-main .spotlights {
+    background-color: #f5f6f8;
+    border: 1px solid #d5d2d2;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.home-main section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dbaa49;
+    padding-bottom: 10px;
+}
+
+#events-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#events-content>*,
+#spotlights-content>* {
+    background-color: white;
+    border: 1px solid #d5d2d2;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#current-weather {
+    margin-bottom: 20px;
+}
+
+#weather-forecast {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#weather-forecast h3 {
+    color: #142a42;
+    margin-bottom: 10px;
+}
+
+#spotlights-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#spotlights-content img {
+    display: block;
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+#spotlights-content h2,
+#spotlights-content h3 {
+    color: #142a42;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #d9aa4c;
+    padding-bottom: 8px;
+}
+
+#spotlights-content a {
+    color: #142a42;
+    font-weight: bold;
+}
+
+
+.spotlight-card {
+    text-align: center;
+}
+
+.spotlight-card p {
+    margin: 8px 0;
+}
+
+.spotlight-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
