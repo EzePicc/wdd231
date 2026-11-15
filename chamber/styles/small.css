@@ -380,3 +380,19 @@ a:focus {
     display: inline-block;
     margin-top: 10px;
 }
+
+.event-card h3 {
+    color: #142a42;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 8px 0;
+}
+
+.event-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #132b43;
+    font-weight: bold;
+}

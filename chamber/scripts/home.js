@@ -49,10 +49,22 @@ async function loadEvents() {
             const card = document.createElement("div");
             card.classList.add("event-card");
 
+            card.innerHTML = `
+                <h3>${event.name}</h3>
+                <p><strong>Date:</strong> ${event.date}</p>
+                <p><strong>Time:</strong> ${event.time}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                <p>${event.description}</p>
+                <a href="${event.website}" target="_blank" rel="noopener noreferrer">More Information</a>
+            `;
 
+            eventsContent.appendChild(card);
         });
-    } 
-
+    }
+    catch (error) {
+        eventsContent.textContent = "Unable to load events.";
+        console.error("Error loading events:", error);
+    }
 }
 
 loadEvents();
