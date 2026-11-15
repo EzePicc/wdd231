@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Alphajores en Ramos Mejía",
+        "date": "2026-11-19",
+        "time": "20:00",
+        "location": "La Quadra Rock Club, Av. Gaona 2195",
+        "description": "Show de rock en vivo de la banda Alphajores.",
+        "website": "https://delrock.ar/agenda/alphajores-ramos-mejias-19-noviembre/"
+    },
+    {
+        "name": "Trasnoche Paranormal",
+        "date": "2026-11-20",
+        "time": "21:00",
+        "location": "Salón Esloveno, Ramos Mejía",
+        "description": "Espectáculo anunciado en la agenda de eventos de Ramos Mejía.",
+        "website": "https://pogo.ar/ciudad/ramos-mejia/"
+    },
+    {
+        "name": "Feria Power Eventos",
+        "date": "2026-11-21",
+        "time": "11:00 -18:00",
+        "location": "Vicente López 90, Ramos Mejía",
+        "description": "Feria de emprendedores locales con productos, gastronomía y música.",
+        "website": "https://eventos.emprenzona.com.ar/feria/power.eventos/feria-power-eventos-ramos-mejia/2026-11-21"
+    }
+]
