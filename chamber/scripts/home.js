@@ -68,3 +68,37 @@ async function loadEvents() {
 }
 
 loadEvents();
+
+
+const currentWeather = document.querySelector("#current-weather");
+const weatherForecast = document.querySelector("#weather-forecast");
+
+const apiKey = "e5be9bce02477b4700c7419841de2cdc";
+const latitude = -34.6500;
+const longitude = -58.5667;
+
+async function getWeather() {
+    try {
+        const currentURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+        const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+        const currentResponse = await fetch(currentURL);
+        const forecastResponse = await fetch(forecastURL);
+
+        const currentData = await currentResponse.json();
+        const forecastData = await forecastResponse.json();
+
+        currentWeather.innerHTML = `
+            <h3>Current Weather in Ramos Mejía</h3>
+            <p>Temperature: ${Math.round(currentData.main.temp)}°C</p>
+            <p>Condition: ${currentData.weather[0].description}</p>
+            <img src="https://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png"
+                alt="${currentData.weather[0].description}">
+        `;
+
+    }
+}
+
+getWeather();
+
