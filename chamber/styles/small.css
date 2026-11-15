@@ -177,9 +177,6 @@ header {
     gap: 0;
 }
 
-#members-content {
-    min-height: 2100px;
-}
 
 .list-view .member-card {
     display: flex;

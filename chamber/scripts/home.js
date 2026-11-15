@@ -12,6 +12,7 @@ async function loadSpotlights() {
         qualifiedMembers.sort(() => Math.random() - 0.5);
 
         const selectedMembers = qualifiedMembers.slice(0, 3);
+
         selectedMembers.forEach(member => {
             const membership = member.membershipLevel === 3 ? "Gold Member" : "Silver Member";
 
@@ -29,8 +30,7 @@ async function loadSpotlights() {
             spotlightsContent.appendChild(card);
         });
 
-    }
-    catch (error) {
+    } catch (error) {
         spotlightsContent.textContent = "Unable to load business spotlights.";
         console.error("Error loading business spotlights:", error);
     }
@@ -60,8 +60,8 @@ async function loadEvents() {
 
             eventsContent.appendChild(card);
         });
-    }
-    catch (error) {
+
+    } catch (error) {
         eventsContent.textContent = "Unable to load events.";
         console.error("Error loading events:", error);
     }
@@ -73,7 +73,7 @@ loadEvents();
 const currentWeather = document.querySelector("#current-weather");
 const weatherForecast = document.querySelector("#weather-forecast");
 
-const apiKey = "e5be9bce02477b4700c7419841de2cdc";
+const apiKey = "TU_NUEVA_API_KEY";
 const latitude = -34.6500;
 const longitude = -58.5667;
 
@@ -86,6 +86,10 @@ async function getWeather() {
         const currentResponse = await fetch(currentURL);
         const forecastResponse = await fetch(forecastURL);
 
+        if (!currentResponse.ok || !forecastResponse.ok) 
+        {
+            throw new Error("Unable to retrieve weather data");
+        }
         const currentData = await currentResponse.json();
         const forecastData = await forecastResponse.json();
 
@@ -97,8 +101,47 @@ async function getWeather() {
                 alt="${currentData.weather[0].description}">
         `;
 
+        const days = {};
+
+        forecastData.list.forEach(item => {
+            const date = item.dt_txt.split(" ")[0];
+            if (!days[date]) {
+                days[date] = item;
+            }
+        });
+
+        const forecastDays = Object.values(days).slice(1, 4);
+
+        forecastDays.forEach(day => {
+
+            const date = new Date(day.dt * 1000);
+            weatherForecast.innerHTML += `
+                <div>
+                    <h4>${date.toLocaleDateString("en-US", { weekday: "long" })}</h4>
+
+                    <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png"
+
+                        alt="${day.weather[0].description}">
+
+                    <p>${Math.round(day.main.temp)}°C</p>
+                    <p>${day.weather[0].description}</p>
+                </div>
+            `;
+        });
+
+    } catch (error) {
+
+        currentWeather.textContent = "Weather information unavailable.";
+
+        console.error("Error loading weather:", error);
     }
 }
 
 getWeather();
 
+document.querySelector("#current-year").textContent =
+    new Date().getFullYear();
+document.querySelector("#last-modified").textContent =
+    new Date(document.lastModified).toLocaleString("en-US", {
+        dateStyle: "long"
+    });
