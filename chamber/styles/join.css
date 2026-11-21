@@ -1,0 +1,72 @@
+.join-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.join-main h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.join-main>p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+
+.application-section,
+.membership-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.application-section h2,
+.membership-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.4rem;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    font: inherit;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #1e3658;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #427a9d;
+}
