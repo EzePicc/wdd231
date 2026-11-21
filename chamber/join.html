@@ -19,24 +19,26 @@
 </head>
 
 <body>
+
     <header>
         <div class="header-content">
-            <img src="images/logo.png" alt="Ramos Mejía Business Community logo">
-            <div>
-                <h2>Ramos Mejía</h2>
-                <p>Business Community</p>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Ramos Mejía Business Community logo">
+            </a>
+
+            <button id="menu-button" aria-label="Open navigation menu">Menu</button>
+
+            <nav id="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="discover.html">Discover More</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <button id="menu-button" aria-label="Open navigation menu"></button>
-
-        <nav id="navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html" class="active">Join</a>
-            <a href="discover.html">Discover More</a>
-        </nav>
     </header>
+
 
     <main class="join-main">
         <h1>Join Our Chamber</h1>
@@ -87,7 +89,7 @@
 
                     <label>
                         Membership Level
-                        <select name="membership" title="Select a membership level" autocomplete="off">  
+                        <select name="membership" title="Select a membership level" autocomplete="off">
                             <option value="np">NP Membership</option>
                             <option value="bronze">Bronze Membership</option>
                             <option value="silver">Silver Membership</option>
